@@ -1,9 +1,7 @@
-// Цвета
 $bg-color: #0a0a0f;
 $primary-purple: #7b2cbf;
 $light-purple: #9d4edd;
 $text-color: #ffffff;
-
 
 body {
     margin: 0;
@@ -17,7 +15,6 @@ body {
     align-items: center;
 }
 
-
 .header {
     width: 100%;
     background: linear-gradient(90deg, #240046, #3c096c);
@@ -30,18 +27,15 @@ body {
     }
 }
 
-
 .container {
     max-width: 900px;
     margin-top: 40px;
 }
 
-
 .title {
     margin-bottom: 40px;
     color: $primary-purple;
 }
-
 
 .memes {
     display: flex;
