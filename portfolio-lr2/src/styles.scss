@@ -1,65 +1,36 @@
-$bg-color: #0a0a0f;
-$primary-purple: #7b2cbf;
-$light-purple: #9d4edd;
-$text-color: #ffffff;
+$primary: #6366f1;  
+$success: #10b981;       
+$dark: #0f172a;          
+$body-bg: #f8fafc;      
+$body-color: #334155;  
 
-body {
-    margin: 0;
-    padding: 0;
-    background-color: $bg-color;
-    color: $text-color;
-    font-family: Arial, sans-serif;
+$font-family-sans-serif: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
 
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+@import "bootstrap/scss/bootstrap";
+
+.hero-section {
+  background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 100%);
+  color: #ffffff;
+  padding: 100px 0;
+  border-bottom: 4px solid $primary;
 }
 
-.header {
-    width: 100%;
-    background: linear-gradient(90deg, #240046, #3c096c);
-    text-align: center;
-    padding: 20px 0;
-
-    h2 {
-        margin: 0;
-        color: $light-purple;
-    }
+.portfolio-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: none;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  }
 }
 
-.container {
-    max-width: 900px;
-    margin-top: 40px;
-}
-
-.title {
-    margin-bottom: 40px;
-    color: $primary-purple;
-}
-
-.memes {
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-    flex-wrap: wrap;
-}
-
-.meme-card {
-    background-color: #1a1a2e;
-    border: 2px solid $primary-purple;
-    border-radius: 15px;
-    padding: 10px;
-    width: 250px;
-    transition: 0.3s;
-
-    &:hover {
-        transform: scale(1.05);
-        border-color: $light-purple;
-    }
-
-    img {
-        width: 100%;
-        height: 100%;
-        border-radius: 10px;
-    }
+.tech-tag {
+  font-size: 0.8rem;
+  background-color: rgba($primary, 0.1);
+  color: $primary;
+  padding: 0.25rem 0.75rem;
+  border-radius: 50px;
+  font-weight: 600;
 }

@@ -28,112 +28,147 @@ npm install bootstrap
 ```html
 <!DOCTYPE html>
 <html lang="ru">
-
 <head>
   <meta charset="UTF-8">
-  <title>Лабораторная работа 2</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Учебное портфолио по дисциплине</title>
 </head>
-
 <body>
 
-  <header class="header">
-    <h2>Лабораторная работа 2</h2>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="#">Университет / Портфолио</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#student">Студент</a></li>
+          <li class="nav-item"><a class="nav-link" href="#labs">Лабораторные</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <header id="student" class="hero-section text-center text-md-start">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-md-8">
+          <span class="badge bg-primary mb-2 px-3 py-2 fs-6">Электронное портфолио</span>
+          <h1 class="display-5 fw-bold mb-3">Дисциплина: Компьютерный практикум</h1>
+          
+          <ul class="list-unstyled text-white-50 fs-5 mb-4">
+            <li><strong>Студент:</strong> Ефимов Сергей Робертович</li>
+            <li><strong>Группа:</strong> ИВТ-2</li>
+          </ul>
+        </div>
+      </div>
+    </div>
   </header>
 
-  <main class="container text-center">
-
-    <h1 class="title">3 прикольные картинки</h1>
-
-    <div class="memes">
-
-      <div class="meme-card">
-        <img src="/src/assets/teodor.jpg" alt="">
+  <section id="labs" class="py-5">
+    <div class="container">
+      <div class="d-flex justify-content-between align-items-center mb-5">
+        <h2 class="fw-bold m-0">Лабораторные работы</h2>
+        <span class="text-muted">Семестр 4</span>
       </div>
+      
+      <div class="row g-4">
+        
+        <div class="col-md-4">
+          <div class="card h-100 portfolio-card">
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title fw-bold">Лабораторная работа №1</h5>
+              <p class="card-text text-muted flex-grow-1">Тема: Создание сайта-портфолио.</p>
+              <div class="mb-3">
+                <span class="tech-tag">Hugo</span>
+              </div>
+              <div class="d-grid gap-2 d-flex">
+                <a href="https://github.com/yasnoponyal17/web-portfolio" target="_blank" class="btn btn-sm btn-outline-primary flex-fill">Репозиторий</a>
+                <a href="https://yasnoponyal17.github.io/web-portfolio/" target="_blank" class="btn btn-sm btn-outline-secondary flex-fill">GitHub Pages</a>
+              </div>
+            </div>
+          </div>
+        </div>
 
-      <div class="meme-card">
-        <img src="/src/assets/yosip.jpg" alt="">
+        <div class="col-md-4">
+          <div class="card h-100 portfolio-card border-primary" style="border-width: 2px;">
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title fw-bold">Лабораторная работа №2</h5>
+              <p class="card-text text-muted flex-grow-1">Тема: Сборка сайта с помощью Node, npm, SASS, vite.</p>
+              <div class="mb-3">
+                <span class="tech-tag">Node.js</span>
+                <span class="tech-tag">Vite</span>
+                <span class="tech-tag">Bootstrap</span>
+                <span class="tech-tag">Sass</span>
+              </div>
+              <div class="d-grid gap-2 d-flex">
+                <a href="https://github.com/yasnoponyal17/site-build-lr2/tree/main/portfolio-lr2" target="_blank" class="btn btn-sm btn-primary flex-fill">Репозиторий</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="card h-100 portfolio-card opacity-75">
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title fw-bold">Лабораторная работа №3</h5>
+              <p class="card-text text-muted flex-grow-1">Тема: Протокол HTTP. Клиент-серверное взаимодействие</p>
+              <div class="mb-3">
+              </div>
+              <div class="d-grid gap-2 d-flex">
+                <a href="#" class="btn btn-sm btn-outline-primary disabled flex-fill">Ссылки нет</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
       </div>
-
-      <div class="meme-card">
-        <img src="/src/assets/litvin.jpg" alt="">
-      </div>
-
     </div>
-
-  </main>
+  </section>
 
   <script type="module" src="/src/main.js"></script>
 </body>
-
 </html>
 ```
 
 ### styles.scss
 ```scss
-$bg-color: #0a0a0f;
-$primary-purple: #7b2cbf;
-$light-purple: #9d4edd;
-$text-color: #ffffff;
+$primary: #6366f1;  
+$success: #10b981;       
+$dark: #0f172a;          
+$body-bg: #f8fafc;      
+$body-color: #334155;  
 
-body {
-    margin: 0;
-    padding: 0;
-    background-color: $bg-color;
-    color: $text-color;
-    font-family: Arial, sans-serif;
+$font-family-sans-serif: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
 
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+@import "bootstrap/scss/bootstrap";
+
+.hero-section {
+  background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 100%);
+  color: #ffffff;
+  padding: 100px 0;
+  border-bottom: 4px solid $primary;
 }
 
-.header {
-    width: 100%;
-    background: linear-gradient(90deg, #240046, #3c096c);
-    text-align: center;
-    padding: 20px 0;
-
-    h2 {
-        margin: 0;
-        color: $light-purple;
-    }
+.portfolio-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: none;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  }
 }
 
-.container {
-    max-width: 900px;
-    margin-top: 40px;
-}
-
-.title {
-    margin-bottom: 40px;
-    color: $primary-purple;
-}
-
-.memes {
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-    flex-wrap: wrap;
-}
-
-.meme-card {
-    background-color: #1a1a2e;
-    border: 2px solid $primary-purple;
-    border-radius: 15px;
-    padding: 10px;
-    width: 250px;
-    transition: 0.3s;
-
-    &:hover {
-        transform: scale(1.05);
-        border-color: $light-purple;
-    }
-
-    img {
-        width: 100%;
-        height: 100%;
-        border-radius: 10px;
-    }
+.tech-tag {
+  font-size: 0.8rem;
+  background-color: rgba($primary, 0.1);
+  color: $primary;
+  padding: 0.25rem 0.75rem;
+  border-radius: 50px;
+  font-weight: 600;
 }
 ```
 ### main.js
@@ -144,7 +179,7 @@ import './styles.scss'
 console.log('App started')
 ```
 ## Результат
-![Результат](src/assets/result.png)
+![Результат](src/assets/new-result.png)
 ## Запуск проекта
 ```bash
 npm run dev
